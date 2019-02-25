@@ -1,0 +1,483 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R
+0
+ 18.03.30 JOB05759 ---- MONDAY,    11 FEB 2019 ----
+ 18.03.30 JOB05759  IRR010I  USERID KC03O80  IS ASSIGNED TO THIS JOB.
+ 18.03.30 JOB05759  IEF677I WARNING MESSAGE(S) FOR JOB KC03O80X ISSUED
+ 18.03.30 JOB05759  ICH70001I KC03O80  LAST ACCESS AT 18:01:49 ON MONDAY, FEBRUARY 11, 2019
+ 18.03.30 JOB05759  $HASP373 KC03O80X STARTED - INIT 2    - CLASS A        - SYS S0W1
+ 18.03.31 JOB05759  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 18.03.31 JOB05759  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 18.03.31 JOB05759  -KC03O80X                      00    410 ******    .00     .0    761   0      0      0      0     0
+ 18.03.31 JOB05759  -KC03O80X                      00    169 ******    .00     .0    529   0      0      0      0     0
+ 18.03.31 JOB05759  -KC03O80X                      00    250 ******    .00     .0    405   0      0      0      0     0
+ 18.03.31 JOB05759  -KC03O80X ENDED.  NAME-CHRISTOPHER          TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 18.03.31 JOB05759  $HASP395 KC03O80X ENDED
+0------ JES2 JOB STATISTICS ------
+-  11 FEB 2019 JOB EXECUTION DATE
+-           92 CARDS READ
+-          241 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           16 SYSOUT SPOOL KBYTES
+-         0.01 MINUTES EXECUTION TIME
+         1 //KC03O80X JOB 1,CHRISTOPHER,LINES=(5,CANCEL),NOTIFY=KC03O80,           JOB05759
+           // MSGLEVEL=(2,0),MSGCLASS=A                                            00020001
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00030001
+           // PARM.COBOL='NOX'                                                     00040001
+        26 //SYSIN DD *                                                            00050001
+        30 //LKED.SYSPRINT DD DUMMY                                                00069101
+           //* REPLACE THE ? IN THE DSN BEL=2 WITH YOUR GROUP NUMBER               00069201
+        41 //GO.FILEIN DD DSN=KC02580.P1G7.DAT,DISP=SHR                            00069307
+        42 //GO.FILEOUT DD SYSOUT=A                                                00069401
+        43 //GO.SYSOUT DD SYSOUT=A                                                 00069501
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        35 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED
+ ICH70001I KC03O80  LAST ACCESS AT 18:01:49 ON MONDAY, FEBRUARY 11, 2019
+ IEF142I KC03O80X COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/COBOL   /START 2019042.1803
+ IEF032I STEP/COBOL   /STOP  2019042.1803
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:  8896K  SYS:   308K  EXT:  1579720K  SYS:    11660K
+         ATB- REAL:                    24K  SLOTS:                     0K
+              VIRT- ALLOC:       4M SHRD:       0M
+ IEF142I KC03O80X LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2019042.1803
+ IEF032I STEP/LKED    /STOP  2019042.1803
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    88K  SYS:   292K  EXT:     1640K  SYS:    11604K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF142I KC03O80X GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2019042.1803
+ IEF032I STEP/GO      /STOP  2019042.1803
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   120K  SYS:   388K  EXT:     2944K  SYS:    11764K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03O80X/START 2019042.1803
+ IEF033I  JOB/KC03O80X/STOP  2019042.1803
+         CPU:     0 HR  00 MIN  00.05 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 02/11/2019  Time 18:03:30   Page     1
+0Invocation parameters:
+  NOX
+0Options in effect:
+  NOADATA
+    ADV
+    QUOTE
+    ARITH(COMPAT)
+  NOAWO
+  NOBLOCK0
+    BUFSIZE(4096)
+  NOCICS
+    CODEPAGE(1140)
+  NOCOMPILE(S)
+  NOCURRENCY
+    DATA(31)
+  NODATEPROC
+    DBCS
+  NODECK
+  NODIAGTRUNC
+  NODLL
+  NODUMP
+  NODYNAM
+  NOEXIT
+  NOEXPORTALL
+  NOFASTSRT
+    FLAG(I,I)
+  NOFLAGMIG4
+  NOFLAGSTD
+    INTDATE(ANSI)
+    LANGUAGE(EN)
+  NOLIB
+    LINECOUNT(60)
+  NOLIST
+  NOMAP
+  NOMDECK
+  NONAME
+    NSYMBOL(NATIONAL)
+  NONUMBER
+    NUMPROC(NOPFD)
+    OBJECT
+  NOOFFSET
+  NOOPTIMIZE
+    OUTDD(SYSOUT)
+    PGMNAME(COMPAT)
+    RENT
+    RMODE(AUTO)
+    SEQUENCE
+    SIZE(MAX)
+    SOURCE
+    SPACE(1)
+  NOSQL
+    SQLCCSID
+  NOSSRANGE
+  NOTERM
+  NOTEST
+  NOTHREAD
+    TRUNC(STD)
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 02/11/2019  Time 18:03:30   Page     2
+0 NOVBREF
+  NOWORD
+    XMLPARSE(XMLSS)
+  NOXREF
+    YEARWINDOW(1900)
+    ZWB
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               LOCDAT    Date 02/11/2019  Time 18:03:30   Page     3
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000001                IDENTIFICATION DIVISION.                                         00060002
+   000002                                                                                 00061004
+   000003                PROGRAM-ID. LOCDAT.                                              00061104
+   000004                                                                                 00061204
+   000005                ENVIRONMENT DIVISION.                                            00061304
+   000006                INPUT-OUTPUT SECTION.                                            00061404
+   000007                FILE-CONTROL.                                                    00061504
+   000008                    SELECT LOC-DATA                                              00061604
+   000009                        ASSIGN TO FILEIN.                                        00061704
+   000010                    SELECT LOC-REPORT                                            00061804
+   000011                        ASSIGN TO FILEOUT.                                       00061904
+   000012                                                                                 00062004
+   000013                DATA DIVISION.                                                   00062104
+   000014                FILE SECTION.                                                    00062204
+   000015                FD  LOC-DATA                                                     00062306
+   000016                    RECORDING MODE IS F.                                         00062404
+   000017                01  LOC-RECORD            PIC X(109).                            00062508
+   000018                FD  LOC-REPORT                                                   00062604
+   000019                    RECORDING MODE IS F.                                         00062704
+   000020                01  LOC-REPORT-LINE      PIC X(81).                              00062807
+   000021                WORKING-STORAGE SECTION.                                         00062904
+   000022                01  WS-SWITCHES.                                                 00063004
+   000023                  05  WS-EOF-SWITCH       PIC X(3).                              00063104
+   000024                                                                                 00063204
+   000025                01  R-LOC-DATA-RECORD.                                           00063304
+   000026                  05  R-LOC-ID-NUMBER       PIC 9(8).                            00063412
+   000027                  05  R-LOC-NAME            PIC X(24).                           00063512
+   000028                  05  R-LOC-TYPE            PIC X(16).                           00063613
+   000029                  05  R-LOC-STATE           PIC X(3).                            00063712
+   000030                  05  R-LOC-STATE-CODE      PIC 9(3).                            00063812
+   000031                  05  R-LOC-COUNTY          PIC X(13).                           00063912
+   000032                  05  R-LOC-COUNTY-NUM      PIC 9(3).                            00064012
+   000033                  05  R-LOC-CORDS.                                               00064102
+   000034                    10  R-LOC-DMS-1          PIC X(8).                           00064212
+   000035                    10  R-LOC-DMS-2          PIC X(9).                           00064312
+   000036                    10  R-LOC-LAT            PIC 9(10).                          00064415
+   000037                    10  R-LOC-LONG           PIC 9(12).                          00064516
+   000038                                                                                 00064602
+   000039                                                                                 00064702
+   000040                01  LOC-LINE.                                                    00064802
+   000041                  05                      PIC X VALUE SPACES.                    00064902
+   000042                  05  LOC-NAME            PIC X(23).                             00065011
+   000043                  05                      PIC X VALUE SPACES.                    00065102
+   000044                  05  LOC-TYPE            PIC X(15).                             00065213
+   000045                  05                      PIC X VALUE SPACES.                    00065302
+   000046                  05  LOC-LAT             PIC 9(10).                             00065414
+   000047                  05                      PIC X VALUE SPACES.                    00065502
+   000048                  05  LOC-LONG            PIC 9(11).                             00065614
+   000049                  05                      PIC X VALUE SPACES.                    00065702
+   000050                  05  LOC-STATE           PIC X(2).                              00065802
+   000051                  05                      PIC X VALUE SPACES.                    00065902
+   000052                  05  LOC-COUNTY          PIC X(12).                             00066002
+   000053                PROCEDURE DIVISION.                                              00066102
+   000054                100-PRINT-LOCATIONS.                                             00066202
+   000055                    OPEN INPUT LOC-DATA                                          00066302
+   000056                         OUTPUT LOC-REPORT                                       00066402
+   000057                                                                                 00066502
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               LOCDAT    Date 02/11/2019  Time 18:03:30   Page     4
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000058                    MOVE 'NO ' TO WS-EOF-SWITCH                                  00066603
+   000059                    PERFORM UNTIL WS-EOF-SWITCH = 'YES'                          00066707
+   000060      1             READ LOC-DATA INTO R-LOC-DATA-RECORD                         00066802
+   000061      1                AT END                                                    00066902
+   000062      2                   MOVE 'YES' TO WS-EOF-SWITCH                            00067002
+   000063      1                NOT AT END                                                00067102
+   000064      2                   PERFORM 200-PROCESS-RECORD                             00067207
+   000065      1              END-READ                                                    00067302
+   000066                    END-PERFORM                                                  00067404
+   000067                    CLOSE LOC-DATA                                               00067504
+   000068                      LOC-REPORT                                                 00067602
+   000069                    STOP RUN.                                                    00067707
+   000070                                                                                 00067802
+   000071                200-PROCESS-RECORD.                                              00067902
+   000072                    MOVE R-LOC-NAME TO LOC-NAME                                  00068002
+   000073                    MOVE R-LOC-TYPE TO LOC-TYPE                                  00068102
+   000074                    MOVE R-LOC-LAT TO LOC-LAT                                    00068202
+   000075                    MOVE R-LOC-LONG TO LOC-LONG                                  00068302
+   000076                    MOVE R-LOC-STATE TO LOC-STATE                                00068402
+   000077                    MOVE R-LOC-COUNTY TO LOC-COUNTY                              00068502
+   000078                    MOVE LOC-LINE TO LOC-REPORT-LINE                             00068602
+   000079                    WRITE LOC-REPORT-LINE                                        00068702
+   000080                          AFTER ADVANCING 2 LINES                                00068807
+   000081                    .                                                            00068902
+-* Statistics for COBOL program LOCDAT:
+ *    Source records = 81
+ *    Data Division statements = 24
+ *    Procedure Division statements = 16
+0End of compilation 1,  program LOCDAT,  no statements flagged.
+0Return code 0
+0 Clinton Church          Church          33.6345944 -81.2814915 SC Aiken
+0 Clio School             School          34.0071144 -78.9703096 SC Horry
+0 Clock Branch School     School          34.1979327 -79.8411745 SC Florence
+0 Clover                  Populated Place 35.1112478 -81.2264646 SC York
+0 Clover Chapel Cemetery  Cemetery        35.1148518 -81.2347946 SC York
+0 Clubhouse Creek         Gut             33.4587792 -79.1047635 SC Georgetown
+0 Clubhouse Point         Cape            32.7801763 -79.8123055 SC Charleston
+0 Clyburn                 Populated Place 34.4187634 -80.5992425 SC Kershaw
+0 Clyde                   Populated Place 34.3854316 -80.1845138 SC Darlington
+0 Clydesdale Canal        Canal           32.1185392 -81.0784452 SC Jasper
+0 Cobbs Pond              Reservoir       34.0740074 -80.8231907 SC Richland
+0 Cockfield Bay           Basin           33.9590511 -79.6228399 SC Florence
+0 Cockran School          School          33.8754474 -79.0700375 SC Horry
+0 Cofer Pond              Reservoir       33.6422694 -81.4254255 SC Aiken
+0 Coker Pond              Lake            34.4978384 -79.8745932 SC Chesterfield
+0 Colclough Pond          Lake            33.4853001 -80.3711896 SC Clarendon
+0 Cold Spring Church      Church          34.9284502 -82.7184678 SC Pickens
+0 Cole Island             Island          32.4604680 -80.8481628 SC Jasper
+0 Cole Island             Island          32.6418470 -79.9928697 SC Charleston
+0 Coleman Island          Island          32.1490948 -80.9489995 SC Beaufort
+0 Coleman Pond            Lake            33.6530985 -81.5629018 SC Aiken
+0 Coleman Ridge Church    Church          33.7929170 -81.7028843 SC Edgefield
+0 Coleman Thankful Church Church          33.8368090 -81.5976047 SC Aiken
+0 College of Charleston   School          32.7837987 -79.9372950 SC Charleston
+0 Colleton Neck           Cape            32.3076994 -80.7881633 SC Beaufort
+0 Collier School          School          33.3018251 -80.8348176 SC Orangeburg
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R
+0
+ 18.03.30 JOB05759 ---- MONDAY,    11 FEB 2019 ----
+ 18.03.30 JOB05759  IRR010I  USERID KC03O80  IS ASSIGNED TO THIS JOB.
+ 18.03.30 JOB05759  IEF677I WARNING MESSAGE(S) FOR JOB KC03O80X ISSUED
+ 18.03.30 JOB05759  ICH70001I KC03O80  LAST ACCESS AT 18:01:49 ON MONDAY, FEBRUARY 11, 2019
+ 18.03.30 JOB05759  $HASP373 KC03O80X STARTED - INIT 2    - CLASS A        - SYS S0W1
+ 18.03.31 JOB05759  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 18.03.31 JOB05759  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 18.03.31 JOB05759  -KC03O80X                      00    410 ******    .00     .0    761   0      0      0      0     0
+ 18.03.31 JOB05759  -KC03O80X                      00    169 ******    .00     .0    529   0      0      0      0     0
+ 18.03.31 JOB05759  -KC03O80X                      00    250 ******    .00     .0    405   0      0      0      0     0
+ 18.03.31 JOB05759  -KC03O80X ENDED.  NAME-CHRISTOPHER          TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 18.03.31 JOB05759  $HASP395 KC03O80X ENDED
+0------ JES2 JOB STATISTICS ------
+-  11 FEB 2019 JOB EXECUTION DATE
+-           92 CARDS READ
+-          241 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           16 SYSOUT SPOOL KBYTES
+-         0.01 MINUTES EXECUTION TIME
+         1 //KC03O80X JOB 1,CHRISTOPHER,LINES=(5,CANCEL),NOTIFY=KC03O80,           JOB05759
+           // MSGLEVEL=(2,0),MSGCLASS=A                                            00020001
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00030001
+           // PARM.COBOL='NOX'                                                     00040001
+        26 //SYSIN DD *                                                            00050001
+        30 //LKED.SYSPRINT DD DUMMY                                                00069101
+           //* REPLACE THE ? IN THE DSN BEL=2 WITH YOUR GROUP NUMBER               00069201
+        41 //GO.FILEIN DD DSN=KC02580.P1G7.DAT,DISP=SHR                            00069307
+        42 //GO.FILEOUT DD SYSOUT=A                                                00069401
+        43 //GO.SYSOUT DD SYSOUT=A                                                 00069501
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        35 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED
+ ICH70001I KC03O80  LAST ACCESS AT 18:01:49 ON MONDAY, FEBRUARY 11, 2019
+ IEF142I KC03O80X COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/COBOL   /START 2019042.1803
+ IEF032I STEP/COBOL   /STOP  2019042.1803
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:  8896K  SYS:   308K  EXT:  1579720K  SYS:    11660K
+         ATB- REAL:                    24K  SLOTS:                     0K
+              VIRT- ALLOC:       4M SHRD:       0M
+ IEF142I KC03O80X LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2019042.1803
+ IEF032I STEP/LKED    /STOP  2019042.1803
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    88K  SYS:   292K  EXT:     1640K  SYS:    11604K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF142I KC03O80X GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2019042.1803
+ IEF032I STEP/GO      /STOP  2019042.1803
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   120K  SYS:   388K  EXT:     2944K  SYS:    11764K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03O80X/START 2019042.1803
+ IEF033I  JOB/KC03O80X/STOP  2019042.1803
+         CPU:     0 HR  00 MIN  00.05 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 02/11/2019  Time 18:03:30   Page     1
+0Invocation parameters:
+  NOX
+0Options in effect:
+  NOADATA
+    ADV
+    QUOTE
+    ARITH(COMPAT)
+  NOAWO
+  NOBLOCK0
+    BUFSIZE(4096)
+  NOCICS
+    CODEPAGE(1140)
+  NOCOMPILE(S)
+  NOCURRENCY
+    DATA(31)
+  NODATEPROC
+    DBCS
+  NODECK
+  NODIAGTRUNC
+  NODLL
+  NODUMP
+  NODYNAM
+  NOEXIT
+  NOEXPORTALL
+  NOFASTSRT
+    FLAG(I,I)
+  NOFLAGMIG4
+  NOFLAGSTD
+    INTDATE(ANSI)
+    LANGUAGE(EN)
+  NOLIB
+    LINECOUNT(60)
+  NOLIST
+  NOMAP
+  NOMDECK
+  NONAME
+    NSYMBOL(NATIONAL)
+  NONUMBER
+    NUMPROC(NOPFD)
+    OBJECT
+  NOOFFSET
+  NOOPTIMIZE
+    OUTDD(SYSOUT)
+    PGMNAME(COMPAT)
+    RENT
+    RMODE(AUTO)
+    SEQUENCE
+    SIZE(MAX)
+    SOURCE
+    SPACE(1)
+  NOSQL
+    SQLCCSID
+  NOSSRANGE
+  NOTERM
+  NOTEST
+  NOTHREAD
+    TRUNC(STD)
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 02/11/2019  Time 18:03:30   Page     2
+0 NOVBREF
+  NOWORD
+    XMLPARSE(XMLSS)
+  NOXREF
+    YEARWINDOW(1900)
+    ZWB
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               LOCDAT    Date 02/11/2019  Time 18:03:30   Page     3
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000001                IDENTIFICATION DIVISION.                                         00060002
+   000002                                                                                 00061004
+   000003                PROGRAM-ID. LOCDAT.                                              00061104
+   000004                                                                                 00061204
+   000005                ENVIRONMENT DIVISION.                                            00061304
+   000006                INPUT-OUTPUT SECTION.                                            00061404
+   000007                FILE-CONTROL.                                                    00061504
+   000008                    SELECT LOC-DATA                                              00061604
+   000009                        ASSIGN TO FILEIN.                                        00061704
+   000010                    SELECT LOC-REPORT                                            00061804
+   000011                        ASSIGN TO FILEOUT.                                       00061904
+   000012                                                                                 00062004
+   000013                DATA DIVISION.                                                   00062104
+   000014                FILE SECTION.                                                    00062204
+   000015                FD  LOC-DATA                                                     00062306
+   000016                    RECORDING MODE IS F.                                         00062404
+   000017                01  LOC-RECORD            PIC X(109).                            00062508
+   000018                FD  LOC-REPORT                                                   00062604
+   000019                    RECORDING MODE IS F.                                         00062704
+   000020                01  LOC-REPORT-LINE      PIC X(81).                              00062807
+   000021                WORKING-STORAGE SECTION.                                         00062904
+   000022                01  WS-SWITCHES.                                                 00063004
+   000023                  05  WS-EOF-SWITCH       PIC X(3).                              00063104
+   000024                                                                                 00063204
+   000025                01  R-LOC-DATA-RECORD.                                           00063304
+   000026                  05  R-LOC-ID-NUMBER       PIC 9(8).                            00063412
+   000027                  05  R-LOC-NAME            PIC X(24).                           00063512
+   000028                  05  R-LOC-TYPE            PIC X(16).                           00063613
+   000029                  05  R-LOC-STATE           PIC X(3).                            00063712
+   000030                  05  R-LOC-STATE-CODE      PIC 9(3).                            00063812
+   000031                  05  R-LOC-COUNTY          PIC X(13).                           00063912
+   000032                  05  R-LOC-COUNTY-NUM      PIC 9(3).                            00064012
+   000033                  05  R-LOC-CORDS.                                               00064102
+   000034                    10  R-LOC-DMS-1          PIC X(8).                           00064212
+   000035                    10  R-LOC-DMS-2          PIC X(9).                           00064312
+   000036                    10  R-LOC-LAT            PIC 9(10).                          00064415
+   000037                    10  R-LOC-LONG           PIC 9(12).                          00064516
+   000038                                                                                 00064602
+   000039                                                                                 00064702
+   000040                01  LOC-LINE.                                                    00064802
+   000041                  05                      PIC X VALUE SPACES.                    00064902
+   000042                  05  LOC-NAME            PIC X(23).                             00065011
+   000043                  05                      PIC X VALUE SPACES.                    00065102
+   000044                  05  LOC-TYPE            PIC X(15).                             00065213
+   000045                  05                      PIC X VALUE SPACES.                    00065302
+   000046                  05  LOC-LAT             PIC 9(10).                             00065414
+   000047                  05                      PIC X VALUE SPACES.                    00065502
+   000048                  05  LOC-LONG            PIC 9(11).                             00065614
+   000049                  05                      PIC X VALUE SPACES.                    00065702
+   000050                  05  LOC-STATE           PIC X(2).                              00065802
+   000051                  05                      PIC X VALUE SPACES.                    00065902
+   000052                  05  LOC-COUNTY          PIC X(12).                             00066002
+   000053                PROCEDURE DIVISION.                                              00066102
+   000054                100-PRINT-LOCATIONS.                                             00066202
+   000055                    OPEN INPUT LOC-DATA                                          00066302
+   000056                         OUTPUT LOC-REPORT                                       00066402
+   000057                                                                                 00066502
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               LOCDAT    Date 02/11/2019  Time 18:03:30   Page     4
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000058                    MOVE 'NO ' TO WS-EOF-SWITCH                                  00066603
+   000059                    PERFORM UNTIL WS-EOF-SWITCH = 'YES'                          00066707
+   000060      1             READ LOC-DATA INTO R-LOC-DATA-RECORD                         00066802
+   000061      1                AT END                                                    00066902
+   000062      2                   MOVE 'YES' TO WS-EOF-SWITCH                            00067002
+   000063      1                NOT AT END                                                00067102
+   000064      2                   PERFORM 200-PROCESS-RECORD                             00067207
+   000065      1              END-READ                                                    00067302
+   000066                    END-PERFORM                                                  00067404
+   000067                    CLOSE LOC-DATA                                               00067504
+   000068                      LOC-REPORT                                                 00067602
+   000069                    STOP RUN.                                                    00067707
+   000070                                                                                 00067802
+   000071                200-PROCESS-RECORD.                                              00067902
+   000072                    MOVE R-LOC-NAME TO LOC-NAME                                  00068002
+   000073                    MOVE R-LOC-TYPE TO LOC-TYPE                                  00068102
+   000074                    MOVE R-LOC-LAT TO LOC-LAT                                    00068202
+   000075                    MOVE R-LOC-LONG TO LOC-LONG                                  00068302
+   000076                    MOVE R-LOC-STATE TO LOC-STATE                                00068402
+   000077                    MOVE R-LOC-COUNTY TO LOC-COUNTY                              00068502
+   000078                    MOVE LOC-LINE TO LOC-REPORT-LINE                             00068602
+   000079                    WRITE LOC-REPORT-LINE                                        00068702
+   000080                          AFTER ADVANCING 2 LINES                                00068807
+   000081                    .                                                            00068902
+-* Statistics for COBOL program LOCDAT:
+ *    Source records = 81
+ *    Data Division statements = 24
+ *    Procedure Division statements = 16
+0End of compilation 1,  program LOCDAT,  no statements flagged.
+0Return code 0
+0 Clinton Church          Church          33.6345944 -81.2814915 SC Aiken
+0 Clio School             School          34.0071144 -78.9703096 SC Horry
+0 Clock Branch School     School          34.1979327 -79.8411745 SC Florence
+0 Clover                  Populated Place 35.1112478 -81.2264646 SC York
+0 Clover Chapel Cemetery  Cemetery        35.1148518 -81.2347946 SC York
+0 Clubhouse Creek         Gut             33.4587792 -79.1047635 SC Georgetown
+0 Clubhouse Point         Cape            32.7801763 -79.8123055 SC Charleston
+0 Clyburn                 Populated Place 34.4187634 -80.5992425 SC Kershaw
+0 Clyde                   Populated Place 34.3854316 -80.1845138 SC Darlington
+0 Clydesdale Canal        Canal           32.1185392 -81.0784452 SC Jasper
+0 Cobbs Pond              Reservoir       34.0740074 -80.8231907 SC Richland
+0 Cockfield Bay           Basin           33.9590511 -79.6228399 SC Florence
+0 Cockran School          School          33.8754474 -79.0700375 SC Horry
+0 Cofer Pond              Reservoir       33.6422694 -81.4254255 SC Aiken
+0 Coker Pond              Lake            34.4978384 -79.8745932 SC Chesterfield
+0 Colclough Pond          Lake            33.4853001 -80.3711896 SC Clarendon
+0 Cold Spring Church      Church          34.9284502 -82.7184678 SC Pickens
+0 Cole Island             Island          32.4604680 -80.8481628 SC Jasper
+0 Cole Island             Island          32.6418470 -79.9928697 SC Charleston
+0 Coleman Island          Island          32.1490948 -80.9489995 SC Beaufort
+0 Coleman Pond            Lake            33.6530985 -81.5629018 SC Aiken
+0 Coleman Ridge Church    Church          33.7929170 -81.7028843 SC Edgefield
+0 Coleman Thankful Church Church          33.8368090 -81.5976047 SC Aiken
+0 College of Charleston   School          32.7837987 -79.9372950 SC Charleston
+0 Colleton Neck           Cape            32.3076994 -80.7881633 SC Beaufort
+0 Collier School          School          33.3018251 -80.8348176 SC Orangeburg
+
