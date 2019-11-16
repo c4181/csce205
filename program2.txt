@@ -1,0 +1,328 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R
+0
+ 20.52.01 JOB02165 ---- MONDAY,    04 MAR 2019 ----
+ 20.52.01 JOB02165  IRR010I  USERID KC03O80  IS ASSIGNED TO THIS JOB.
+ 20.52.01 JOB02165  IEF677I WARNING MESSAGE(S) FOR JOB KC03O80X ISSUED
+ 20.52.01 JOB02165  ICH70001I KC03O80  LAST ACCESS AT 20:51:09 ON MONDAY, MARCH 4, 2019
+ 20.52.01 JOB02165  $HASP373 KC03O80X STARTED - INIT 2    - CLASS A        - SYS S0W1
+ 20.52.01 JOB02165  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 20.52.01 JOB02165  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 20.52.01 JOB02165  -KC03O80X                      00    420 ******    .00     .0    851   0      0      0      0     0
+ 20.52.01 JOB02165  -KC03O80X                      00    172 ******    .00     .0    499   0      0      0      0     0
+ 20.52.01 JOB02165  -KC03O80X                      00     80 ******    .00     .0    302   0      0      0      0     0
+ 20.52.01 JOB02165  -KC03O80X ENDED.  NAME-CHRISTOPHER          TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 20.52.01 JOB02165  $HASP395 KC03O80X ENDED
+0------ JES2 JOB STATISTICS ------
+-  04 MAR 2019 JOB EXECUTION DATE
+-          173 CARDS READ
+-          327 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           26 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //KC03O80X JOB 1,CHRISTOPHER,LINES=(5,CANCEL),NOTIFY=KC03O80,           JOB02165
+           // MSGLEVEL=(2,0),MSGCLASS=A                                            00020000
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00030000
+           // PARM.COBOL='NOX'                                                     00040000
+        26 //SYSIN DD *                                                            00050000
+        30 //LKED.SYSPRINT DD DUMMY                                                00077900
+           //* REPLACE THE ? IN THE DSN BEL=2 WITH YOUR GROUP NUMBER               00078000
+        41 //GO.FILEIN DD DSN=KC02580.P2G7.DAT,DISP=SHR                            00078103
+        42 //GO.FILEOUT DD SYSOUT=A                                                00078200
+        43 //GO.SYSOUT DD SYSOUT=A                                                 00079000
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        35 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED
+ ICH70001I KC03O80  LAST ACCESS AT 20:51:09 ON MONDAY, MARCH 4, 2019
+ IEF142I KC03O80X COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/COBOL   /START 2019063.2052
+ IEF032I STEP/COBOL   /STOP  2019063.2052
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:  8896K  SYS:   308K  EXT:  1579236K  SYS:    11680K
+         ATB- REAL:                    24K  SLOTS:                     0K
+              VIRT- ALLOC:       4M SHRD:       0M
+ IEF142I KC03O80X LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2019063.2052
+ IEF032I STEP/LKED    /STOP  2019063.2052
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    88K  SYS:   296K  EXT:     1640K  SYS:    11624K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF142I KC03O80X GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2019063.2052
+ IEF032I STEP/GO      /STOP  2019063.2052
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   120K  SYS:   304K  EXT:     2944K  SYS:    11784K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03O80X/START 2019063.2052
+ IEF033I  JOB/KC03O80X/STOP  2019063.2052
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 03/04/2019  Time 20:52:01   Page     1
+0Invocation parameters:
+  NOX
+0Options in effect:
+  NOADATA
+    ADV
+    QUOTE
+    ARITH(COMPAT)
+  NOAWO
+  NOBLOCK0
+    BUFSIZE(4096)
+  NOCICS
+    CODEPAGE(1140)
+  NOCOMPILE(S)
+  NOCURRENCY
+    DATA(31)
+  NODATEPROC
+    DBCS
+  NODECK
+  NODIAGTRUNC
+  NODLL
+  NODUMP
+  NODYNAM
+  NOEXIT
+  NOEXPORTALL
+  NOFASTSRT
+    FLAG(I,I)
+  NOFLAGMIG4
+  NOFLAGSTD
+    INTDATE(ANSI)
+    LANGUAGE(EN)
+  NOLIB
+    LINECOUNT(60)
+  NOLIST
+  NOMAP
+  NOMDECK
+  NONAME
+    NSYMBOL(NATIONAL)
+  NONUMBER
+    NUMPROC(NOPFD)
+    OBJECT
+  NOOFFSET
+  NOOPTIMIZE
+    OUTDD(SYSOUT)
+    PGMNAME(COMPAT)
+    RENT
+    RMODE(AUTO)
+    SEQUENCE
+    SIZE(MAX)
+    SOURCE
+    SPACE(1)
+  NOSQL
+    SQLCCSID
+  NOSSRANGE
+  NOTERM
+  NOTEST
+  NOTHREAD
+    TRUNC(STD)
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 03/04/2019  Time 20:52:01   Page     2
+0 NOVBREF
+  NOWORD
+    XMLPARSE(XMLSS)
+  NOXREF
+    YEARWINDOW(1900)
+    ZWB
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               LOCDAT    Date 03/04/2019  Time 20:52:01   Page     3
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000001                IDENTIFICATION DIVISION.                                         00060000
+   000002                                                                                 00061000
+   000003                PROGRAM-ID. LOCDAT.                                              00061100
+   000004                                                                                 00061200
+   000005                ENVIRONMENT DIVISION.                                            00061300
+   000006                INPUT-OUTPUT SECTION.                                            00061400
+   000007                FILE-CONTROL.                                                    00061500
+   000008                    SELECT LOC-DATA                                              00061600
+   000009                        ASSIGN TO FILEIN.                                        00061700
+   000010                    SELECT LOC-REPORT                                            00061800
+   000011                        ASSIGN TO FILEOUT.                                       00061900
+   000012                                                                                 00062000
+   000013                DATA DIVISION.                                                   00062100
+   000014                FILE SECTION.                                                    00062200
+   000015                FD  LOC-DATA                                                     00062300
+   000016                    RECORDING MODE IS F.                                         00062400
+   000017                01  LOC-RECORD            PIC X(109).                            00062511
+   000018                FD  LOC-REPORT                                                   00062600
+   000019                    RECORDING MODE IS V.                                         00062706
+   000020                                                                                 00062803
+   000021                01  LOC-REPORT-LINE            PIC X(102).                       00062912
+   000022                                                                                 00063103
+   000023                WORKING-STORAGE SECTION.                                         00063200
+   000024                01  WS-SWITCHES.                                                 00063300
+   000025                  05  WS-EOF-SWITCH       PIC X(3).                              00063400
+   000026                                                                                 00063500
+   000027                01  AC-ACCUMULATORS.                                             00063601
+   000028                  05 AC-TOTAL-NET-PROFIT           PIC 9(5)V99.                  00063706
+   000029                                                                                 00063803
+   000030                01  ARITHMETIC-WORK-AREA.                                        00064306
+   000031                  05  AW-GROSS-PROFIT    PIC 999V99.                             00064612
+   000032                  05  AW-TAX-AMOUNT      PIC 999V99.                             00064710
+   000033                  05  AW-NET-PROFIT      PIC 9999V99.                            00064806
+   000034                                                                                 00064906
+   000035                01  IR-LOC-DATA-RECORD.                                          00065000
+   000036                  05  IR-LOC-ID-NUMBER       PIC 9(7).                           00065109
+   000037                  05  FILLER                 PIC X.                              00065209
+   000038                  05  IR-LOC-NAME            PIC X(23).                          00065309
+   000039                  05  FILLER                 PIC X.                              00065409
+   000040                  05  IR-LOC-TYPE            PIC X(15).                          00065509
+   000041                  05  FILLER                 PIC X.                              00065609
+   000042                  05  IR-LOC-STATE           PIC X(2).                           00065709
+   000043                  05  FILLER                 PIC X.                              00065809
+   000044                  05  IR-COST-OF-FEATURE     PIC 9(2).                           00065909
+   000045                  05  FILLER                 PIC X.                              00066009
+   000046                  05  IR-LOC-COUNTY          PIC X(12).                          00066109
+   000047                  05  FILLER                 PIC X.                              00066209
+   000048                  05  IR-LOC-COUNTY-NUM      PIC 9(2).                           00066309
+   000049                  05  FILLER                 PIC X.                              00066409
+   000050                  05  IR-LOC-CORDS.                                              00066509
+   000051                    10  IR-LOC-DMS-1          PIC X(8).                          00066601
+   000052                    10  IR-LOC-DMS-2          PIC X(9).                          00066701
+   000053                    10  IR-LOC-LAT            PIC 9(10).                         00066801
+   000054                    10  IR-LOC-LONG           PIC 9(12).                         00066901
+   000055                                                                                 00067000
+   000056                                                                                 00067100
+   000057                01  LOC-LINE.                                                    00067200
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               LOCDAT    Date 03/04/2019  Time 20:52:01   Page     4
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000058                  05                      PIC X VALUE SPACES.                    00067300
+   000059                  05  LOC-NAME            PIC X(23).                             00067400
+   000060                  05                      PIC X VALUE SPACES.                    00067500
+   000061                  05  LOC-TYPE            PIC X(15).                             00067600
+   000062                  05                      PIC X VALUE SPACES.                    00067700
+   000063                  05  LOC-LAT             PIC 9(10).                             00067800
+   000064                  05                      PIC X VALUE SPACES.                    00067900
+   000065                  05  LOC-LONG            PIC 9(11).                             00068000
+   000066                  05                      PIC X VALUE SPACES.                    00068100
+   000067                  05  LOC-STATE           PIC X(2).                              00068200
+   000068                  05                      PIC X VALUE SPACES.                    00068300
+   000069                  05  LOC-COST            PIC $$$.99.                            00068411
+   000070                  05                      PIC X VALUE SPACES.                    00068501
+   000071                  05  LOC-SURVEY-COST     PIC $$$.99.                            00068611
+   000072                  05                      PIC X VALUE SPACES.                    00068701
+   000073                  05  LOC-GROSS-PROFIT    PIC $$$.99.                            00068811
+   000074                  05                      PIC X VALUE SPACES.                    00068901
+   000075                  05  LOC-TAX-AMOUNT      PIC $$$.99.                            00069011
+   000076                  05                      PIC X VALUE SPACES.                    00069110
+   000077                  05  LOC-NET-PROFIT      PIC $ZZZ.99.                           00069212
+   000078                                                                                 00069306
+   000079                01  HL1-HEADING-LINE-1.                                          00069408
+   000080                  05                      PIC X VALUE SPACES.                    00069512
+   000081                  05                      PIC X(8) VALUE 'LOCATION'.             00069606
+   000082                  05                      PIC X(16) VALUE SPACES.                00069706
+   000083                  05                      PIC X(4) VALUE 'TYPE'.                 00069806
+   000084                  05                      PIC X(12) VALUE SPACES.                00069906
+   000085                  05                      PIC X(8) VALUE 'LATITUDE'.             00070006
+   000086                  05                      PIC X(4) VALUE SPACES.                 00070106
+   000087                  05                      PIC X(9) VALUE 'LONGITUDE'.            00070206
+   000088                  05                      PIC X(6) VALUE SPACES.                 00070312
+   000089                  05                      PIC X(4) VALUE 'COST'.                 00070412
+   000090                  05                      PIC X(3) VALUE SPACES.                 00070512
+   000091                  05                      PIC X(3) VALUE 'FEE'.                  00070612
+   000092                  05                      PIC X(4) VALUE SPACES.                 00070712
+   000093                  05                      PIC X(5) VALUE 'GROSS'.                00070812
+   000094                  05                      PIC X(3) VALUE SPACES.                 00070912
+   000095                  05                      PIC X(3) VALUE 'TAX'.                  00071012
+   000096                  05                      PIC X(3) VALUE SPACES.                 00071112
+   000097                  05                      PIC X(6) VALUE 'PROFIT'.               00071212
+   000098                                                                                 00071312
+   000099                01  TL-TOTAL-LINE.                                               00071412
+   000100                  05                      PIC X(18) VALUE SPACES.                00071512
+   000101                  05                      PIC X(18) VALUE 'TOTAL NET PROFIT: '.  00071612
+   000102                  05 TL-NET-PROFIT        PIC $$$$$$.99.                         00071712
+   000103                                                                                 00071803
+   000104                PROCEDURE DIVISION.                                              00071900
+   000105                100-START.                                                       00072003
+   000106                    MOVE ZEROS TO AC-TOTAL-NET-PROFIT                            00072106
+   000107                    OPEN INPUT LOC-DATA                                          00072200
+   000108                         OUTPUT LOC-REPORT                                       00072300
+   000109                    INITIALIZE ARITHMETIC-WORK-AREA                              00072406
+   000110                    PERFORM 500-PRINT-HEADINGS                                   00072506
+   000111                    MOVE 'NO ' TO WS-EOF-SWITCH                                  00072600
+   000112                    PERFORM UNTIL WS-EOF-SWITCH = 'YES'                          00072700
+   000113      1             READ LOC-DATA INTO IR-LOC-DATA-RECORD                        00072801
+   000114      1                AT END                                                    00072908
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               LOCDAT    Date 03/04/2019  Time 20:52:01   Page     5
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000115      2                   PERFORM 999-END-PROGRAM                                00073012
+   000116      2                   MOVE 'YES' TO WS-EOF-SWITCH                            00073100
+   000117      1                NOT AT END                                                00073200
+   000118      2                   PERFORM 200-PROCESS-RECORD                             00073300
+   000119      2                   PERFORM 400-PRINT-TOTAL-LINE                           00073410
+   000120      1              END-READ                                                    00073500
+   000121                    END-PERFORM                                                  00073600
+   000122                    CLOSE LOC-DATA                                               00073700
+   000123                      LOC-REPORT                                                 00073800
+   000124                    STOP RUN.                                                    00073900
+   000125                                                                                 00074000
+   000126                200-PROCESS-RECORD.                                              00074100
+   000127                    MOVE IR-LOC-NAME TO LOC-NAME                                 00074203
+   000128                    MOVE IR-LOC-TYPE TO LOC-TYPE                                 00074303
+   000129                    MOVE IR-LOC-LAT TO LOC-LAT                                   00074403
+   000130                    MOVE IR-LOC-LONG TO LOC-LONG                                 00074503
+   000131                    MOVE IR-LOC-STATE TO LOC-STATE                               00074603
+   000132                    MOVE IR-COST-OF-FEATURE TO LOC-COST                          00074703
+   000133                    MOVE 10.00 TO LOC-SURVEY-COST                                00074812
+   000134                    PERFORM 300-ARITHMETIC                                       00074906
+   000135                    MOVE AW-GROSS-PROFIT TO LOC-GROSS-PROFIT                     00075006
+   000136                    MOVE AW-NET-PROFIT TO LOC-NET-PROFIT                         00075106
+   000137                    MOVE AW-TAX-AMOUNT TO LOC-TAX-AMOUNT                         00075210
+   000138                    .                                                            00075309
+   000139                300-ARITHMETIC.                                                  00075406
+   000140                    SUBTRACT 10 FROM IR-COST-OF-FEATURE                          00075506
+   000141                             GIVING AW-GROSS-PROFIT                              00075609
+   000142                    COMPUTE AW-TAX-AMOUNT = AW-GROSS-PROFIT * 0.07               00075710
+   000143                    COMPUTE AW-NET-PROFIT = AW-GROSS-PROFIT - AW-TAX-AMOUNT      00075810
+   000144                    ADD AW-NET-PROFIT TO AC-TOTAL-NET-PROFIT                     00075909
+   000145                    .                                                            00076006
+   000146                400-PRINT-TOTAL-LINE.                                            00076106
+   000147                    MOVE LOC-LINE TO LOC-REPORT-LINE                             00076203
+   000148                    WRITE LOC-REPORT-LINE                                        00076303
+   000149                          AFTER ADVANCING 2 LINES                                00076403
+   000150                    .                                                            00076506
+   000151                                                                                 00076606
+   000152                500-PRINT-HEADINGS.                                              00076706
+   000153                    MOVE HL1-HEADING-LINE-1 TO LOC-REPORT-LINE                   00076806
+   000154                    WRITE LOC-REPORT-LINE                                        00076906
+   000155                          AFTER ADVANCING 2 LINES                                00077006
+   000156                    .                                                            00077106
+   000157                999-END-PROGRAM.                                                 00077212
+   000158                    MOVE AC-TOTAL-NET-PROFIT TO TL-NET-PROFIT                    00077312
+   000159                    MOVE TL-TOTAL-LINE TO LOC-REPORT-LINE                        00077412
+   000160                    WRITE LOC-REPORT-LINE                                        00077512
+   000161                        AFTER ADVANCING 2 LINES                                  00077612
+   000162                    .                                                            00077712
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               LOCDAT    Date 03/04/2019  Time 20:52:01   Page     6
+0* Statistics for COBOL program LOCDAT:
+ *    Source records = 162
+ *    Data Division statements = 37
+ *    Procedure Division statements = 35
+0End of compilation 1,  program LOCDAT,  no statements flagged.
+0Return code 0
+0 LOCATION                TYPE            LATITUDE    LONGITUDE      COST   FEE    GROSS   TAX   PROFIT
+0 Clinton Church          Church          33.6345944 -81.2814915 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Clio School             School          34.0071144 -78.9703096 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Clock Branch School     School          34.1979327 -79.8411745 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Clover                  Populated Place 35.1112478 -81.2264646 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Clover Chapel Cemetery  Cemetery        35.1148518 -81.2347946 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Clubhouse Creek         Gut             33.4587792 -79.1047635 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Clubhouse Point         Cape            32.7801763 -79.8123055 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Clyburn                 Populated Place 34.4187634 -80.5992425 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Clyde                   Populated Place 34.3854316 -80.1845138 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Clydesdale Canal        Canal           32.1185392 -81.0784452 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Cobbs Pond              Reservoir       34.0740074 -80.8231907 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Cockfield Bay           Basin           33.9590511 -79.6228399 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Cockran School          School          33.8754474 -79.0700375 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Cofer Pond              Reservoir       33.6422694 -81.4254255 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Coker Pond              Lake            34.4978384 -79.8745932 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Colclough Pond          Lake            33.4853001 -80.3711896 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Cold Spring Church      Church          34.9284502 -82.7184678 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Cole Island             Island          32.4604680 -80.8481628 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Cole Island             Island          32.6418470 -79.9928697 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Coleman Island          Island          32.1490948 -80.9489995 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Coleman Pond            Lake            33.6530985 -81.5629018 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Coleman Ridge Church    Church          33.7929170 -81.7028843 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Coleman Thankful Church Church          33.8368090 -81.5976047 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 College of Charleston   School          32.7837987 -79.9372950 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Colleton Neck           Cape            32.3076994 -80.7881633 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0 Collier School          School          33.3018251 -80.8348176 SC $45.00 $10.00 $35.00  $2.45 $ 32.55
+0                  TOTAL NET PROFIT:   $846.30
+

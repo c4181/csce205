@@ -1,0 +1,710 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R
+0
+ 14.52.10 JOB02839 ---- FRIDAY,    03 MAY 2019 ----
+ 14.52.10 JOB02839  IRR010I  USERID KC03O80  IS ASSIGNED TO THIS JOB.
+ 14.52.10 JOB02839  IEF677I WARNING MESSAGE(S) FOR JOB KC03CF7X ISSUED
+ 14.52.10 JOB02839  ICH70001I KC03O80  LAST ACCESS AT 14:51:10 ON FRIDAY, MAY 3, 2019
+ 14.52.10 JOB02839  $HASP373 KC03CF7X STARTED - INIT 3    - CLASS A        - SYS S0W1
+ 14.52.11 JOB02839  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 14.52.11 JOB02839  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 14.52.11 JOB02839  -KC03CF7X                      08    470 ******    .00     .0    943   0      0      0      0     0
+ 14.52.11 JOB02839  -KC03CF7X                      00    187 ******    .00     .0    587   0      0      0      0     0
+ 14.52.11 JOB02839  -KC03CF7X                      00   1006 ******    .00     .0    674   0      0      0      0     0
+ 14.52.11 JOB02839  -KC03CF7X ENDED.  NAME-MICAH                TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 14.52.11 JOB02839  $HASP395 KC03CF7X ENDED
+0------ JES2 JOB STATISTICS ------
+-  03 MAY 2019 JOB EXECUTION DATE
+-          350 CARDS READ
+-          709 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           51 SYSOUT SPOOL KBYTES
+-         0.01 MINUTES EXECUTION TIME
+         1 //KC03CF7X JOB 1,MICAH,LINES=(5,CANCEL),NOTIFY=KC03O80,                 JOB02839
+           // MSGLEVEL=(2,0),MSGCLASS=A                                            00000200
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00000300
+           // PARM.COBOL='NOX'                                                     00000400
+        26 //SYSIN DD *                                                            00000500
+           //* REPLACE THE ? IN THE DSN BEL=2 WITH YOUR GROUP NUMBER               00023500
+        42 //GO.FILEIN DD DSN=KC02580.P5G7M.DAT,DISP=SHR                           00023600
+        43 //GO.FILEIN2 DD DSN=KC02580.P5G7T.DAT,DISP=SHR                          00023610
+        44 //GO.FILEOUT DD SYSOUT=A                                                00023700
+        45 //GO.RPTOUT DD SYSOUT=A                                                 00023710
+        46 //GO.ERROUT DD SYSOUT=A                                                 00023720
+        47 //GO.SYSOUT DD SYSOUT=A                                                 00023800
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        36 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED
+ ICH70001I KC03O80  LAST ACCESS AT 14:51:10 ON FRIDAY, MAY 3, 2019
+ IEF142I KC03CF7X COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0008
+ IEF373I STEP/COBOL   /START 2019123.1452
+ IEF032I STEP/COBOL   /STOP  2019123.1452
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:  8896K  SYS:   308K  EXT:  1577792K  SYS:    11536K
+         ATB- REAL:                    24K  SLOTS:                     0K
+              VIRT- ALLOC:       4M SHRD:       0M
+ IEF142I KC03CF7X LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2019123.1452
+ IEF032I STEP/LKED    /STOP  2019123.1452
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    88K  SYS:   292K  EXT:     1640K  SYS:    11484K
+         ATB- REAL:                    36K  SLOTS:                     0K
+              VIRT- ALLOC:       6M SHRD:       0M
+ IEF142I KC03CF7X GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2019123.1452
+ IEF032I STEP/GO      /STOP  2019123.1452
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   120K  SYS:   308K  EXT:     2956K  SYS:    11540K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03CF7X/START 2019123.1452
+ IEF033I  JOB/KC03CF7X/STOP  2019123.1452
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 05/03/2019  Time 14:52:10   Page     1
+0Invocation parameters:
+  NOX
+0Options in effect:
+  NOADATA
+    ADV
+    QUOTE
+    ARITH(COMPAT)
+  NOAWO
+  NOBLOCK0
+    BUFSIZE(4096)
+  NOCICS
+    CODEPAGE(1140)
+  NOCOMPILE(S)
+  NOCURRENCY
+    DATA(31)
+  NODATEPROC
+    DBCS
+  NODECK
+  NODIAGTRUNC
+  NODLL
+  NODUMP
+  NODYNAM
+  NOEXIT
+  NOEXPORTALL
+  NOFASTSRT
+    FLAG(I,I)
+  NOFLAGMIG4
+  NOFLAGSTD
+    INTDATE(ANSI)
+    LANGUAGE(EN)
+  NOLIB
+    LINECOUNT(60)
+  NOLIST
+  NOMAP
+  NOMDECK
+  NONAME
+    NSYMBOL(NATIONAL)
+  NONUMBER
+    NUMPROC(NOPFD)
+    OBJECT
+  NOOFFSET
+  NOOPTIMIZE
+    OUTDD(SYSOUT)
+    PGMNAME(COMPAT)
+    RENT
+    RMODE(AUTO)
+    SEQUENCE
+    SIZE(MAX)
+    SOURCE
+    SPACE(1)
+  NOSQL
+    SQLCCSID
+  NOSSRANGE
+  NOTERM
+  NOTEST
+  NOTHREAD
+    TRUNC(STD)
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 05/03/2019  Time 14:52:10   Page     2
+0 NOVBREF
+  NOWORD
+    XMLPARSE(XMLSS)
+  NOXREF
+    YEARWINDOW(1900)
+    ZWB
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               PROFITS   Date 05/03/2019  Time 14:52:10   Page     3
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000001                IDENTIFICATION DIVISION.                                         00000600
+   000002                                                                                 00000700
+   000003                PROGRAM-ID. PROFITS.                                             00000800
+   000004               *WRITTEN BY MICAH L, CHRISTOPHER M, BRANDON C, EVAN N, RYAN B     00000900
+   000005                                                                                 00001000
+   000006                ENVIRONMENT DIVISION.                                            00001100
+   000007                                                                                 00001200
+   000008                INPUT-OUTPUT SECTION.                                            00001300
+   000009                FILE-CONTROL.                                                    00001400
+   000010                                                                                 00001500
+   000011                    SELECT MASTER-LIST                                           00001600
+   000012                        ASSIGN TO FILEIN.                                        00001700
+   000013                                                                                 00001800
+   000014                    SELECT TRANSACTION                                           00001900
+   000015                        ASSIGN TO FILEIN2.                                       00002000
+   000016                                                                                 00002100
+   000017                    SELECT UPDATED-LIST                                          00002200
+   000018                        ASSIGN TO FILEOUT.                                       00002300
+   000019                                                                                 00002400
+   000020                    SELECT SALES-REPORT                                          00002500
+   000021                        ASSIGN TO RPTOUT.                                        00002600
+   000022                                                                                 00002700
+   000023                    SELECT ERROR-REPORT                                          00002800
+   000024                        ASSIGN TO ERROUT.                                        00002900
+   000025                                                                                 00003000
+   000026                DATA DIVISION.                                                   00003100
+   000027                                                                                 00003200
+   000028                FILE SECTION.                                                    00003300
+   000029                                                                                 00003400
+   000030                FD MASTER-LIST.                                                  00003500
+
+ ==000030==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "MASTER-LIST".
+
+   000031                01 ML-RECORD     PIC X(109).                                     00003600
+   000032                                                                                 00003700
+   000033                FD TRANSACTION.                                                  00003800
+
+ ==000033==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "TRANSACTION".
+
+   000034                01 T-RECORD      PIC X(7).                                       00003900
+   000035                                                                                 00004000
+   000036                FD UPDATED-LIST.                                                 00004100
+
+ ==000036==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "UPDATED-LIST".
+
+   000037                01 UL-RECORD     PIC X(112).                                     00004200
+   000038                                                                                 00004300
+   000039                FD SALES-REPORT.                                                 00004400
+
+ ==000039==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "SALES-REPORT".
+
+   000040                01 R-REPORT-LINE PIC X(44).                                      00004500
+   000041                                                                                 00004600
+   000042                FD ERROR-REPORT.                                                 00004700
+
+ ==000042==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "ERROR-REPORT".
+
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               PROFITS   Date 05/03/2019  Time 14:52:10   Page     4
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000043                01 LOC-ERROR-LINE PIC X(39).                                     00004800
+   000044                                                                                 00004900
+   000045                                                                                 00005000
+   000046                WORKING-STORAGE SECTION.                                         00005100
+   000047                                                                                 00005200
+   000048                01 WS-SWITCHES.                                                  00005300
+   000049                   05 MS-EOF-SWITCH         PIC X.                               00005400
+   000050                      88 MS-MASTER-EOF      VALUE 'E'.                           00005410
+   000051                      88 MS-MASTER-NOT-EOF  VALUE 'N'.                           00005420
+   000052                   05 TS-EOF-SWITCH         PIC X.                               00005500
+   000053                      88 TS-TRANS-EOF       VALUE 'E'.                           00005501
+   000054                      88 TS-TRANS-NOT-EOF   VALUE 'N'.                           00005502
+   000055                   05 MS-READ-MSTR-SWITCH   PIC X.                               00005503
+   000056                      88 MS-READ-MASTER     VALUE 'T'.                           00005504
+   000057                      88 MS-NOT-READ-MASTER VALUE 'F'.                           00005505
+   000058                   05 TS-READ-TRANS-SWITCH  PIC X.                               00005506
+   000059                      88 TS-READ-TRANS      VALUE 'T'.                           00005507
+   000060                      88 TS-NOT-READ-TRANS  VALUE 'F'.                           00005508
+   000061                   05 WS-TRANS-PROC-SWITCH PIC X.                                00005509
+   000062                      88 WS-TRANS-PROC     VALUE 'P'.                            00005510
+   000063                      88 WS-TRANS-NOT-PROC VALUE 'N'.                            00005511
+   000064                                                                                 00005512
+   000065                01 MASTER-LIST-RECORD.                                           00005600
+   000066                     05 MLR-EXTRA        PIC X(4).                               00005700
+   000067                     05 MLR-KEY          PIC X(3).                               00005800
+   000068                     05                  PIC X VALUE SPACES.                     00005900
+   000069                     05 MLR-NAME         PIC X(23).                              00006000
+   000070                     05                  PIC X VALUE SPACES.                     00006100
+   000071                     05 MLR-TYPE         PIC X(15).                              00006200
+   000072                     05                  PIC X VALUE SPACES.                     00006300
+   000073                     05 MLR-STATE        PIC X(2).                               00006400
+   000074                     05                  PIC X VALUE SPACES.                     00006500
+   000075                     05 MLR-STATE-FIP    PIC X(2).                               00006600
+   000076                     05                  PIC X VALUE SPACES.                     00006700
+   000077                     05 MLR-COUNTY       PIC X(12).                              00006800
+   000078                     05                  PIC X VALUE SPACES.                     00006900
+   000079                     05 MLR-OUR-CHARGE   PIC 9(2).                               00007000
+   000080                     05                  PIC X VALUE SPACES.                     00007100
+   000081                     05 MLR-CORDS        PIC X(39).                              00007200
+   000082                     05                  PIC X VALUE SPACES.                     00007300
+   000083                                                                                 00007600
+   000084                01 UPDATED-LIST-RECORD.                                          00007700
+   000085                     05 ULR-KEY          PIC X(3).                               00007800
+   000086                     05                  PIC X VALUE SPACES.                     00007900
+   000087                     05 ULR-NAME         PIC X(23).                              00008000
+   000088                     05                  PIC X VALUE SPACES.                     00008100
+   000089                     05 ULR-TYPE         PIC X(15).                              00008200
+   000090                     05                  PIC X VALUE SPACES.                     00008300
+   000091                     05 ULR-STATE        PIC X(2).                               00008400
+   000092                     05                  PIC X VALUE SPACES.                     00008410
+   000093                     05 ULR-STATE-FIP    PIC X(2).                               00008420
+   000094                     05                  PIC X VALUE SPACES.                     00008500
+   000095                     05 ULR-COUNTY       PIC X(12).                              00008600
+   000096                     05                  PIC X VALUE SPACES.                     00008700
+   000097                     05 ULR-OUR-CHARGE   PIC 9(2).                               00008800
+   000098                     05                  PIC X VALUE SPACES.                     00008900
+   000099                     05 ULR-CORDS        PIC X(39).                              00009000
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               PROFITS   Date 05/03/2019  Time 14:52:10   Page     5
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000100                     05                  PIC X VALUE SPACES.                     00009100
+   000101                     05 ULR-NUM-PUR      PIC 9(2).                               00009400
+   000102                                                                                 00009500
+   000103                                                                                 00009600
+   000104                01 TRANSACTION-RECORD.                                           00009700
+   000105                     05 TR-KEY           PIC X(3).                               00009800
+   000106                     05 TR-PRICE         PIC 9(3).                               00009900
+   000107                     05 TR-COMPANY       PIC X(1).                               00010000
+   000108                                                                                 00010100
+   000109                                                                                 00010200
+   000110                01 REPORT-RECORD.                                                00010300
+   000111                     05 RR-PLACE-NAME    PIC X(23).                              00010400
+   000112                     05                  PIC X VALUE SPACES.                     00010500
+   000113                     05 RR-PRICE         PIC $ZV99.                              00010600
+   000114                     05                  PIC X VALUE SPACES.                     00010700
+   000115                     05 RR-COMPANY       PIC X.                                  00010800
+   000116                                                                                 00010900
+   000117                                                                                 00011000
+   000118                01 ERROR-REPORT-LINE.                                            00011100
+   000119                     05                  PIC X(16) VALUE 'ERROR IN RECORD '.     00011200
+   000120                     05                  PIC X VALUE SPACES.                     00011300
+   000121                     05 ER-PRICE         PIC 9(3).                               00011600
+   000122                     05 ER-ERROR-REC     PIC X(9).                               00011610
+   000123                                                                                 00011700
+   000124                01 TL-TOTAL-LINE.                                                00011710
+   000125                     05                  PIC X VALUE SPACES.                     00011720
+   000126                     05                  PIC X(14) VALUE 'TOTAL PROFIT: '.       00011721
+   000127                     05 TL-TOTAL-PAID    PIC $ZZZZ.99.                           00011730
+   000128                     05                  PIC X(17) VALUE ' NUMBER OF SALES: '.   00011731
+
+ ==000128==> IGYGR1056-E "VALUE" literal "' NUMBER OF SALES: '" exceeded the length specified in
+                         the "PICTURE" definition.  The literal was truncated to the "PICTURE"
+                         definition length.
+
+   000129                     05 TL-NUM-OF-SALES  PIC 99.                                 00011740
+   000130                                                                                 00011800
+   000131                                                                                 00011900
+   000132                01 PAGE-HEADING.                                                 00012000
+   000133                     05 PIC X(40)         VALUE SPACES.                          00012100
+   000134                     05 PIC X(13)         VALUE 'GEO-DATA INC.'.                 00012200
+   000135                     05 PIC X(95)         VALUE SPACES.                          00012300
+   000136                                                                                 00012400
+   000137                                                                                 00012500
+   000138                01 ITEM-HEADINGS.                                                00012600
+   000139                     05 PIC X(3)          VALUE SPACES.                          00012700
+   000140                     05 PIC X(2)          VALUE 'ID'.                            00012800
+   000141                     05 PIC X(5)          VALUE SPACES.                          00012900
+   000142                     05 PIC X(12)         VALUE 'FEATURE-NAME'.                  00013000
+   000143                     05 PIC X(10)         VALUE SPACES.                          00013100
+   000144                     05 PIC X(12)         VALUE 'FEATURE-TYPE'.                  00013200
+   000145                     05 PIC X(3)          VALUE SPACES.                          00013300
+   000146                     05 PIC X(5)          VALUE 'STATE'.                         00013400
+   000147                     05 PIC X(8)          VALUE SPACES.                          00013500
+   000148                     05 PIC X(10)         VALUE 'STATE-LONG'.                    00013600
+   000149                     05 PIC X(11)         VALUE SPACES.                          00013700
+   000150                     05 PIC X(6)          VALUE 'COUNTY'.                        00013800
+   000151                     05 PIC X(6)          VALUE SPACES.                          00013900
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               PROFITS   Date 05/03/2019  Time 14:52:10   Page     6
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000152                     05 PIC X(10)         VALUE 'COUNTY-FIP'.                    00014000
+   000153                     05 PIC X(3)          VALUE SPACES.                          00014100
+   000154                     05 PIC X(8)          VALUE 'LATITUDE'.                      00014200
+   000155                     05 PIC X(2)          VALUE SPACES.                          00014300
+   000156                     05 PIC X(9)          VALUE 'LONGITUDE'.                     00014400
+   000157                                                                                 00014500
+   000158                01 RL-REPORT-LINE.                                               00014510
+   000159                   05                     PIC X(10) VALUE SPACES.                00014520
+   000160                   05                     PIC X(8) VALUE 'COMPANY '.             00014530
+   000161                   05 RL-COMPANY          PIC X.                                 00014531
+   000162                   05                     PIC X VALUE SPACES.                    00014540
+   000163                   05 RL-PRICE            PIC $$$$.99.                           00014550
+   000164                                                                                 00014560
+   000165                01 ACCUMULATORS.                                                 00014600
+   000166                                                                                 00014700
+   000167                     05 AC-TOTAL-PAID     PIC 9999V99.                           00014800
+   000168                     05 AC-NUM-OF-SALES   PIC 99.                                00014810
+   000169                                                                                 00015700
+   000170                PROCEDURE DIVISION.                                              00015800
+   000171                                                                                 00015900
+   000172                000-PRINT-EVENT-REPORT.                                          00015910
+   000173                    OPEN INPUT MASTER-LIST                                       00016000
+   000174                               TRANSACTION                                       00016010
+   000175                         OUTPUT UPDATED-LIST                                     00016100
+   000176                                SALES-REPORT                                     00016110
+   000177                                ERROR-REPORT                                     00016120
+   000178                                                                                 00016121
+   000179                    PERFORM 100-INITIALIZE                                       00016130
+   000180                    PERFORM UNTIL MS-MASTER-EOF AND                              00016140
+   000181                                  TS-TRANS-EOF                                   00016150
+   000182      1                PERFORM 200-GET-NEXT-RECORD                               00016160
+   000183      1                PERFORM 300-PROCESS-RECORD                                00016170
+   000184                    END-PERFORM                                                  00016180
+   000185                                                                                 00018000
+   000186                    CLOSE MASTER-LIST                                            00018100
+   000187                          TRANSACTION                                            00018200
+   000188                          UPDATED-LIST                                           00018210
+   000189                          SALES-REPORT                                           00018220
+   000190                          ERROR-REPORT                                           00018230
+   000191                                                                                 00018240
+   000192                    STOP RUN                                                     00018400
+   000193                    .                                                            00018500
+   000194                                                                                 00018600
+   000195                100-INITIALIZE.                                                  00018610
+   000196                    SET MS-READ-MASTER                                           00018620
+   000197                        TS-READ-TRANS                                            00018630
+   000198                        MS-MASTER-NOT-EOF                                        00018640
+   000199                        TS-TRANS-NOT-EOF TO TRUE                                 00018650
+   000200                    INITIALIZE ACCUMULATORS                                      00018660
+   000201                    .                                                            00018700
+   000202                                                                                 00018800
+   000203                200-GET-NEXT-RECORD.                                             00020210
+   000204                    EVALUATE MS-READ-MASTER ALSO TS-READ-TRANS                   00020220
+   000205                          WHEN   TRUE       ALSO   TRUE                          00020230
+   000206      1                      PERFORM 800-READ-MASTER-RECORD                      00020240
+   000207      1                      PERFORM 820-READ-TRANS-RECORD                       00020250
+   000208      1                      SET MS-NOT-READ-MASTER                              00020260
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               PROFITS   Date 05/03/2019  Time 14:52:10   Page     7
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000209      1                          WS-TRANS-NOT-PROC TO TRUE                       00020270
+   000210                                                                                 00020300
+   000211                                                                                 00020310
+   000212                          WHEN   TRUE       ALSO   FALSE                         00020320
+   000213      1                      PERFORM 800-READ-MASTER-RECORD                      00020330
+   000214      1                      SET MS-NOT-READ-MASTER                              00020340
+   000215      1                          WS-TRANS-NOT-PROC TO TRUE                       00020350
+   000216                                                                                 00020360
+   000217                          WHEN   FALSE      ALSO   TRUE                          00020370
+   000218      1                      PERFORM 820-READ-TRANS-RECORD                       00020380
+   000219      1                      SET TS-NOT-READ-TRANS TO TRUE                       00020390
+   000220                    END-EVALUATE                                                 00020391
+   000221                    .                                                            00020392
+   000222                                                                                 00020393
+   000223                300-PROCESS-RECORD.                                              00020394
+   000224                    EVALUATE                                                     00020395
+   000225                          TS-TRANS-EOF   ALSO   MS-MASTER-EOF                    00020396
+   000226                      WHEN     FALSE     ALSO        FALSE                       00020397
+   000227                                                                                 00020401
+   000228      1               EVALUATE TRUE                                              00020402
+   000229      1                 WHEN MLR-KEY = TR-KEY                                    00020403
+   000230      2                   PERFORM 400-PROCESS-TRANS                              00020404
+   000231      2                   SET TS-READ-TRANS                                      00020405
+   000232      2                       WS-TRANS-PROC TO TRUE                              00020406
+   000233                                                                                 00020407
+   000234      1                 WHEN MLR-KEY < TR-KEY                                    00020408
+   000235      2                   IF WS-TRANS-PROC                                       00020409
+   000236      3                     PERFORM 500-PROCESS-MASTER                           00020410
+   000237      2                   ELSE                                                   00020411
+   000238      3                     PERFORM 550-PROCESS-UNMATCHED-MASTER                 00020412
+   000239      2                   END-IF                                                 00020413
+   000240      2                   SET MS-READ-MASTER TO TRUE                             00020414
+   000241                                                                                 00020415
+   000242      1                WHEN MLR-KEY > TR-KEY                                     00020416
+   000243      2                  PERFORM 600-PROCESS-UNMATCHED-TRANS                     00020417
+   000244      2                  SET TS-READ-TRANS TO TRUE                               00020418
+   000245      1               END-EVALUATE                                               00020419
+   000246                                                                                 00020420
+   000247                      WHEN     TRUE      ALSO        FALSE                       00020421
+   000248      1                 IF WS-TRANS-PROC                                         00020422
+   000249      2                   PERFORM 500-PROCESS-MASTER                             00020423
+   000250      1                 ELSE                                                     00020424
+   000251      2                   PERFORM 550-PROCESS-UNMATCHED-MASTER                   00020425
+   000252      1                 END-IF                                                   00020426
+   000253      1                 SET MS-READ-MASTER TO TRUE                               00020427
+   000254                                                                                 00020428
+   000255                      WHEN     FALSE     ALSO        TRUE                        00020429
+   000256      1                 PERFORM 600-PROCESS-UNMATCHED-TRANS                      00020430
+   000257      1                 SET TS-READ-TRANS TO TRUE                                00020431
+   000258                    END-EVALUATE                                                 00020432
+   000259                    .                                                            00020433
+   000260                                                                                 00020434
+   000261                400-PROCESS-TRANS.                                               00020435
+   000262                    IF WS-TRANS-NOT-PROC                                         00020436
+   000263      1               PERFORM 900-PRINT-HEADINGS                                 00020437
+   000264      1               INITIALIZE ACCUMULATORS                                    00020438
+   000265                    END-IF                                                       00020439
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               PROFITS   Date 05/03/2019  Time 14:52:10   Page     8
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000266                    ADD TR-PRICE TO AC-TOTAL-PAID                                00020440
+   000267                    ADD 1 TO AC-NUM-OF-SALES                                     00020450
+   000268                    MOVE TR-COMPANY TO RL-COMPANY                                00020460
+   000269                    MOVE TR-PRICE TO RL-PRICE                                    00020470
+   000270                    MOVE RL-REPORT-LINE TO R-REPORT-LINE                         00020480
+   000271                    WRITE R-REPORT-LINE                                          00020490
+   000272                    .                                                            00020500
+   000273                                                                                 00021900
+   000274                500-PROCESS-MASTER.                                              00022000
+   000275                    IF WS-TRANS-PROC                                             00022100
+   000276      1                PERFORM 520-PRINT-TOTAL-LINE                              00022200
+   000277                    END-IF                                                       00022300
+   000278                    MOVE MLR-NAME TO ULR-NAME                                    00022400
+   000279                    MOVE MLR-TYPE TO ULR-TYPE                                    00022410
+   000280                    MOVE MLR-STATE TO ULR-STATE                                  00022420
+   000281                    MOVE MLR-STATE-FIP TO ULR-STATE-FIP                          00022430
+   000282                    MOVE MLR-COUNTY TO ULR-COUNTY                                00022440
+   000283                    MOVE MLR-OUR-CHARGE TO ULR-OUR-CHARGE                        00022450
+   000284                    MOVE MLR-CORDS TO ULR-CORDS                                  00022460
+   000285                    MOVE AC-NUM-OF-SALES TO ULR-NUM-PUR                          00022500
+   000286                    MOVE UPDATED-LIST-RECORD TO UL-RECORD                        00022501
+   000287                    WRITE UL-RECORD                                              00022510
+   000288                    MOVE 0 TO AC-NUM-OF-SALES                                    00022511
+   000289                    .                                                            00022520
+   000290                                                                                 00022530
+   000291                520-PRINT-TOTAL-LINE.                                            00022531
+   000292                    MOVE AC-TOTAL-PAID TO TL-TOTAL-PAID                          00022532
+   000293                    MOVE AC-NUM-OF-SALES TO TL-NUM-OF-SALES                      00022533
+   000294                    MOVE TL-TOTAL-LINE TO R-REPORT-LINE                          00022534
+   000295                    WRITE R-REPORT-LINE                                          00022535
+   000296                    .                                                            00022537
+   000297                                                                                 00022538
+   000298                550-PROCESS-UNMATCHED-MASTER.                                    00022540
+   000299                    MOVE 0 TO AC-NUM-OF-SALES                                    00022541
+   000300                    MOVE AC-NUM-OF-SALES TO ULR-NUM-PUR                          00022542
+   000301                    MOVE MLR-NAME TO ULR-NAME                                    00022543
+   000302                    MOVE MLR-TYPE TO ULR-TYPE                                    00022544
+   000303                    MOVE MLR-STATE TO ULR-STATE                                  00022545
+   000304                    MOVE MLR-STATE-FIP TO ULR-STATE-FIP                          00022546
+   000305                    MOVE MLR-COUNTY TO ULR-COUNTY                                00022547
+   000306                    MOVE MLR-OUR-CHARGE TO ULR-OUR-CHARGE                        00022548
+   000307                    MOVE MLR-CORDS TO ULR-CORDS                                  00022549
+   000308                    MOVE UPDATED-LIST-RECORD TO UL-RECORD                        00022550
+   000309                    WRITE UL-RECORD                                              00022560
+   000310                       AFTER ADVANCING 1 LINES                                   00022561
+   000311                    .                                                            00022570
+   000312                                                                                 00022580
+   000313                600-PROCESS-UNMATCHED-TRANS.                                     00022590
+   000314                    MOVE TRANSACTION-RECORD TO ER-ERROR-REC                      00022591
+   000315                    MOVE ERROR-REPORT-LINE TO LOC-ERROR-LINE                     00022592
+   000316                    WRITE LOC-ERROR-LINE                                         00022593
+   000317                      AFTER ADVANCING 1 LINES                                    00022594
+   000318                    .                                                            00022595
+   000319                                                                                 00022600
+   000320                800-READ-MASTER-RECORD.                                          00022700
+   000321                    READ MASTER-LIST INTO MASTER-LIST-RECORD                     00022800
+   000322                    AT END                                                       00023300
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               PROFITS   Date 05/03/2019  Time 14:52:10   Page     9
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000323      1               SET MS-MASTER-EOF TO TRUE                                  00023310
+   000324                    END-READ                                                     00023320
+   000325                    .                                                            00023330
+   000326                                                                                 00023340
+   000327                820-READ-TRANS-RECORD.                                           00023350
+   000328                    READ TRANSACTION INTO TRANSACTION-RECORD                     00023360
+   000329                    AT END                                                       00023370
+   000330      1                SET TS-TRANS-EOF TO TRUE                                  00023380
+   000331                    END-READ                                                     00023390
+   000332                    .                                                            00023391
+   000333                                                                                 00023392
+   000334                900-PRINT-HEADINGS.                                              00023393
+   000335                    MOVE MLR-NAME TO RR-PLACE-NAME                               00023400
+   000336                    MOVE REPORT-RECORD TO R-REPORT-LINE                          00023404
+   000337                    WRITE R-REPORT-LINE AFTER ADVANCING 2 LINES                  00023405
+   000338                    .                                                            00023410
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               PROFITS   Date 05/03/2019  Time 14:52:10   Page    10
+0LineID  Message code  Message text
+
+     30  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "MASTER-LIST".
+
+     33  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "TRANSACTION".
+
+     36  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "UPDATED-LIST".
+
+     39  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "SALES-REPORT".
+
+     42  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "ERROR-REPORT".
+
+    128  IGYGR1056-E   "VALUE" literal "' NUMBER OF SALES: '" exceeded the length specified in the "PICTURE" definition.  The literal
+                       was truncated to the "PICTURE" definition length.
+-Messages    Total    Informational    Warning    Error    Severe    Terminating
+0Printed:       6           5                        1
+-* Statistics for COBOL program PROFITS:
+ *    Source records = 338
+ *    Data Division statements = 63
+ *    Procedure Division statements = 80
+0End of compilation 1,  program PROFITS,  highest severity 8.
+0Return code 8
+1z/OS V2 R1 BINDER     14:52:11 FRIDAY MAY  3, 2019
+ BATCH EMULATOR  JOB(KC03CF7X) STEP(STEP2   ) PGM= IEWBLINK  PROCEDURE(LKED    )
+
+
+
+                                 *** O P E R A T I O N   S U M M A R Y   R E P O R T ***
+
+1PROCESSING OPTIONS:
+
+    ALIASES             NO
+    ALIGN2              NO
+    AMODE               UNSPECIFIED
+    CALL                YES
+    CASE                UPPER
+    COMPAT              UNSPECIFIED
+    COMPRESS            AUTO
+    DCBS                NO
+    DYNAM               NO
+    EXTATTR             UNSPECIFIED
+    EXITS:              NONE
+    FILL                NONE
+    GID                 UNSPECIFIED
+    HOBSET              NO
+    INFO                NO
+    LET                 04
+    LINECT              060
+    LIST                SUMMARY
+    LISTPRIV            NO
+    LONGPARM            NO
+    MAP                 NO
+    MAXBLK              032760
+    MODMAP              NO
+    MSGLEVEL            00
+    OVLY                NO
+    PRINT               YES
+    RES                 NO
+    REUSABILITY         UNSPECIFIED
+    RMODE               UNSPECIFIED
+    SIGN                NO
+    STORENX             NOREPLACE
+    STRIPCL             NO
+    STRIPSEC            NO
+    SYMTRACE
+    TERM                NO
+    TRAP                ON
+    UID                 UNSPECIFIED
+    UPCASE              NO
+    WKSPACE             000000K,000000K
+    XCAL                NO
+    XREF                NO
+    ***END OF OPTIONS***
+
+
+
+
+1SAVE OPERATION SUMMARY:
+
+    MEMBER NAME         GO
+    LOAD LIBRARY        SYS19123.T145210.RA000.KC03CF7X.GOSET.H01
+    PROGRAM TYPE        PROGRAM OBJECT(FORMAT 2)
+    VOLUME SERIAL       TEMP00
+    DISPOSITION         ADDED NEW
+    TIME OF SAVE        14.52.11  MAY  3, 2019
+
+
+1SAVE MODULE ATTRIBUTES:
+
+    AC                  000
+    AMODE                31
+    COMPRESSION         NONE
+    DC                  NO
+    EDITABLE            YES
+    EXCEEDS 16MB        NO
+    EXECUTABLE          YES
+    LONGPARM            NO
+    MIGRATABLE          YES
+    OL                  NO
+    OVLY                NO
+    PACK,PRIME          NO,NO
+    PAGE ALIGN          NO
+    REFR                NO
+    RENT                NO
+    REUS                NO
+    RMODE               ANY
+    SCTR                NO
+    SIGN                NO
+    SSI
+    SYM GENERATED       NO
+    TEST                NO
+    XPLINK              NO
+    MODULE SIZE (HEX)   000027C0
+    DASD SIZE (HEX)     00008000
+
+1 ENTRY POINT AND ALIAS SUMMARY:
+
+  NAME:            ENTRY TYPE AMODE C_OFFSET CLASS NAME        STATUS
+
+  PROFITS           MAIN_EP      31 00000000 B_TEXT
+
+                          *** E N D   O F   O P E R A T I O N   S U M M A R Y   R E P O R T ***
+
+
+
+
+1z/OS V2 R1 BINDER     14:52:11 FRIDAY MAY  3, 2019
+ BATCH EMULATOR  JOB(KC03CF7X) STEP(STEP2   ) PGM= IEWBLINK  PROCEDURE(LKED    )
+ IEW2008I 0F03 PROCESSING COMPLETED.  RETURN CODE =  0.
+
+
+
+1----------------------
+ MESSAGE SUMMARY REPORT
+ ----------------------
+  TERMINAL MESSAGES      (SEVERITY = 16)
+  NONE
+
+  SEVERE MESSAGES        (SEVERITY = 12)
+  NONE
+
+  ERROR MESSAGES         (SEVERITY = 08)
+  NONE
+
+  WARNING MESSAGES       (SEVERITY = 04)
+  NONE
+
+  INFORMATIONAL MESSAGES (SEVERITY = 00)
+  2008
+
+
+  **** END OF MESSAGE SUMMARY REPORT ****
+
+     Clinton Church          Church          NC 37 Aiken        30 333805N 0811653W 33.6345944 -81.2814915 04
+     Clio School             School          SC 45 Horry        51 340026N 0785813W 34.0071144 -78.9703096 03
+     Clock Branch School     School          FL 45 Florence     41 341153N 0795028W 34.1979327 -79.8411745 04
+     Clover                  Populated Place SC 45 York         91 350640N 0811335W 35.1112478 -81.2264646 02
+     Clover Chapel Cemetery  Cemetery        SC 45 York         91 350653N 0811405W 35.1148518 -81.2347946 02
+     Clubhouse Creek         Gut             TN 45 Georgetown   43 332732N 0790617W 33.4587792 -79.1047635 02
+     Clubhouse Point         Cape            FL 45 Charleston   19 324649N 0794844W 32.7801763 -79.8123055 00
+     Clyburn                 Populated Place SC 45 Kershaw      55 342508N 0803557W 34.4187634 -80.5992425 00
+     Clyde                   Populated Place TN 45 Darlington   31 342308N 0801104W 34.3854316 -80.1845138 00
+     Clydesdale Canal        Canal           SC 45 Jasper       53 320707N 0810442W 32.1185392 -81.0784452 00
+     Cobbs Pond              Reservoir       SC 45 Richland     79 340426N 0804923W 34.0740074 -80.8231907 00
+     Cockfield Bay           Basin           FL 45 Florence     41 335733N 0793722W 33.9590511 -79.6228399 00
+     Cockran School          School          SC 45 Horry        51 335232N 0790412W 33.8754474 -79.0700375 00
+     Cofer Pond              Reservoir       NC 37 Aiken        30 333832N 0812532W 33.6422694 -81.4254255 00
+     Coker Pond              Lake            SC 45 Chesterfield 25 342952N 0795229W 34.4978384 -79.8745932 00
+     Colclough Pond          Lake            GA 45 Clarendon    27 332907N 0802216W 33.4853001 -80.3711896 00
+     Cold Spring Church      Church          NC 45 Pickens      77 345542N 0824306W 34.9284502 -82.7184678 00
+     Cole Island             Island          SC 45 Jasper       53 322738N 0805053W 32.460468  -80.8481628 00
+     Cole Island             Island          GA 45 Charleston   19 323831N 0795934W 32.641847  -79.9928697 00
+     Coleman Island          Island          NC 37 Beaufort     13 320857N 0805656W 32.1490948 -80.9489995 00
+     Coleman Pond            Lake            NC 37 Aiken        30 333911N 0813346W 33.6530985 -81.5629018 00
+     Coleman Ridge Church    Church          GA 45 Edgefield    37 334735N 0814210W 33.792917  -81.7028843 00
+     Coleman Thankful Church Church          NC 37 Aiken        30 335013N 0813551W 33.836809  -81.5976047 00
+     College of Charleston   School          TN 45 Charleston   19 324702N 0795614W 32.7837987 -79.937295  00
+     Colleton Neck           Cape            TN 37 Beaufort     13 321828N 0804717W 32.3076994 -80.7881633 00
+     Collier School          School          SC 45 Orangeburg   75 331807N 0805005W 33.3018251 -80.8348176 00
+0Clinton Church                
+           COMPANY C $389.00
+           COMPANY A $400.00
+           COMPANY B $426.00
+           COMPANY E $521.00
+  TOTAL PROFIT: $1736.00 NUMBER OF SALES:04
+0Clio School                   
+           COMPANY C $274.00
+           COMPANY B $265.00
+           COMPANY A $254.00
+  TOTAL PROFIT: $ 793.00 NUMBER OF SALES:03
+0Clock Branch School           
+           COMPANY C $342.00
+           COMPANY D $402.00
+           COMPANY E $462.00
+           COMPANY F $498.00
+  TOTAL PROFIT: $1704.00 NUMBER OF SALES:04
+0Clover                        
+           COMPANY A $275.00
+           COMPANY B $371.00
+  TOTAL PROFIT: $ 646.00 NUMBER OF SALES:02
+0Clover Chapel Cemetery        
+           COMPANY D $285.00
+           COMPANY A $375.00
+  TOTAL PROFIT: $ 660.00 NUMBER OF SALES:02
+0Clubhouse Creek               
+           COMPANY C $457.00
+           COMPANY A $534.00
+  TOTAL PROFIT: $ 991.00 NUMBER OF SALES:02
+ ERROR IN RECORD     998999Z
+ ERROR IN RECORD     999999X
+
